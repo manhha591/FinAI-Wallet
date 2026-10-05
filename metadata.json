@@ -1,0 +1,6 @@
+{
+  "name": "FinAI Wallet",
+  "description": "Quản lý chi tiêu cá nhân thông minh với VietQR, quét mã thanh toán và Trợ lý AI Offline bảo mật",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

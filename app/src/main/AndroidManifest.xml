@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <queries>
+        <!-- Vietnamese Banking Apps & E-Wallets -->
+        <package android:name="com.mbmobile" /> <!-- MB Bank -->
+        <package android:name="com.VCB" /> <!-- Vietcombank -->
+        <package android:name="vn.com.techcombank.bb.app" /> <!-- Techcombank -->
+        <package android:name="com.vnpay.bidv" /> <!-- BIDV -->
+        <package android:name="com.vietinbank.ipay" /> <!-- VietinBank -->
+        <package android:name="com.tpb.mb.gprsandroid" /> <!-- TPBank -->
+        <package android:name="com.vnpay.vpbankonline" /> <!-- VPBank -->
+        <package android:name="mobile.acb.com.vn" /> <!-- ACB -->
+        <package android:name="com.mservice.momotransfer" /> <!-- MoMo -->
+        <package android:name="vn.com.vng.zalopay" /> <!-- ZaloPay -->
+
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".FinAiApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.MyApplication">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
